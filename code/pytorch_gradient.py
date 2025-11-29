@@ -2,7 +2,7 @@ import torch
 import matplotlib.pyplot as plt
 
 def f(x):
-    return x^2 + 2*x + 3
+    return x*x + 3*x + 2
 
 if __name__ == '__main__':
     # 生成自变量序列x，张量x，需要自动微分功能
@@ -26,8 +26,8 @@ if __name__ == '__main__':
     # 而不影响自动梯度的计算
 
     # 使用plot绘制图
-    plt.plot(*args:x,y_f,label='f(x)= x*x + 3 * x + 2')
-    plt.plot(*args:x,y_df,label="f'(x)= 2 * x + 3")
+    plt.plot(x,y_f,label='f(x)= x*x + 3 * x + 2')
+    plt.plot(x,y_df,label="f'(x)= 2 * x + 3")
     plt.legend() # 对图像进行标记
     plt.grid(True)
     plt.show()
